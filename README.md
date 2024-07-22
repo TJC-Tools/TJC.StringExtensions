@@ -1,4 +1,4 @@
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/TJC.LibraryName)](https://www.nuget.org/packages/TJC.LibraryName)
+[![NuGet Version and Downloads count](https://buildstats.info/nuget/TJC.StringExtensions)](https://www.nuget.org/packages/TJC.StringExtensions)
 
 ## Pluralize
 
@@ -23,4 +23,3 @@ var itemsSingle = new List<string> { "item1" };
 var singluar = itemsSingle.Pluralize("item");
 Console.WriteLine(singluar); // item
 ```
-
