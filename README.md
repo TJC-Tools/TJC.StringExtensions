@@ -23,3 +23,14 @@ var itemsSingle = new List<string> { "item1" };
 var singluar = itemsSingle.Pluralize("item");
 Console.WriteLine(singluar); // item
 ```
+
+---
+
+## Separator
+
+### [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0) [JoinComma](./TJC.StringExtensions/Separator/SeparatorExtensions.cs)(this [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=net-8.0)\<[string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0)\> strings)
+- Joins a collection of strings with a comma and space.
+```c#
+var items = new List<string> { "one", "two", "three" };
+var result = items.JoinComma(); // one, two, three
+```
