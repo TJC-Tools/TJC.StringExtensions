@@ -33,7 +33,7 @@ public static class SeparatorExtensions
         $"{prefix}{string.Join($"\n{prefix}", strings)}";
 
     public static string JoinNewLineWithSpaces(this IEnumerable<string> strings, int spaces = 4) =>
-        string.Join($"\n{new string(' ', spaces)}", strings);
+        $"{new string(' ', spaces)}{string.Join($"\n{new string(' ', spaces)}", strings)}";
 
     #endregion
 

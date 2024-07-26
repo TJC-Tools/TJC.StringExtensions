@@ -1,3 +1,5 @@
+using TJC.StringExtensions.Pluralize;
+
 namespace TJC.StringExtensions.Tests.Pluralize;
 
 [TestClass]
