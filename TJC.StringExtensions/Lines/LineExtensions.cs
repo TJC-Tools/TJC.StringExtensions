@@ -1,6 +1,6 @@
 ﻿namespace TJC.StringExtensions.Lines;
 
-public static class LinesExtension
+public static class LineExtensions
 {
     private const int MaxLineWidth = 60;
 

@@ -99,3 +99,10 @@ var result = input.RemoveSymbols(['!', '.']); // a1!b2c3.d4 e5
 
 ### [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0) [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0).[RemoveMultipleBlankLines](./TJC.StringExtensions/Lines/LineExtensions.cs)()
 - Remove multiple blank lines from a string.
+
+---
+
+## Padding
+
+### [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0) [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0).[PadBoth](./TJC.StringExtensions/Padding/PaddingExtensions.cs)([int](https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=net-8.0) length)
+- Pads both side of a string so that it's centered between the padding
