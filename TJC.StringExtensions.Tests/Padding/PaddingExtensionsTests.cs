@@ -15,7 +15,7 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(4);
 
         // Assert
-        Assert.AreEqual(" abc", result);
+        Assert.AreEqual("abc ", result);
     }
 
     [TestMethod]
@@ -41,7 +41,7 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(6);
 
         // Assert
-        Assert.AreEqual("  abc ", result);
+        Assert.AreEqual(" abc  ", result);
     }
 
     [TestMethod]
@@ -67,6 +67,6 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(8);
 
         // Assert
-        Assert.AreEqual("   abc  ", result);
+        Assert.AreEqual("  abc   ", result);
     }
 }
