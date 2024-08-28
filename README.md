@@ -1,5 +1,14 @@
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/TJC.StringExtensions)](https://www.nuget.org/packages/TJC.StringExtensions)
 
+## Table of Contents
+- [Pluralize](#pluralize)
+- [Separator](#separator)
+- [Parsing](#parsing)
+- [Lines](#lines)
+- [Padding](#padding)
+
+---
+
 ## Pluralize
 
 ### [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0) [string](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0).[Pluralize](./TJC.StringExtensions/Pluralize/PluralizeExtensions.cs)(int number, string? pluralized = null)
