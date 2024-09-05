@@ -9,10 +9,10 @@ namespace TJC.StringExtensions.Header
         {
             var tempLines = new List<string>();
             // Get lines
-            foreach (var line in lines)
-                foreach (var splitLine in line.SplitNewLine())
-                    foreach (var chunk in splitLine.SplitChunks(internalLineLimit))
-                        tempLines.Add(chunk);
+            foreach (var newLine in lines)
+                foreach (var splitLine in newLine.SplitNewLine())
+                    foreach (var line in splitLine.SplitLines(internalLineLimit))
+                        tempLines.Add(line);
 
             // Get border
             var longestLine = tempLines.Max(x => x.Length);
