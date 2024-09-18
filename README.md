@@ -1,4 +1,6 @@
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/TJC.StringExtensions)](https://www.nuget.org/packages/TJC.StringExtensions)
+![GitHub Tag](https://img.shields.io/github/v/tag/TJC-Tools/TJC.StringExtensions) ![NuGet Version](https://img.shields.io/nuget/v/TJC.StringExtensions)
+
+![NuGet Downloads](https://img.shields.io/nuget/dt/TJC.StringExtensions) ![Size](https://img.shields.io/github/repo-size/TJC-Tools/TJC.StringExtensions) ![License](https://img.shields.io/github/license/TJC-Tools/TJC.StringExtensions.svg)
 
 ## Table of Contents
 - [Pluralize](#pluralize)
