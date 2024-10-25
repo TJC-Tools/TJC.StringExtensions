@@ -46,4 +46,18 @@ public class CamelCaseExtensionsTests
         // Assert
         Assert.AreEqual(expected, result);
     }
+
+    [TestMethod]
+    public void ToCamelCaseTest()
+    {
+        // Arrange
+        var input = "Camel Case Extensions";
+        var expected = "camelCaseExtensions";
+
+        // Act
+        var result = input.ToCamelCase();
+
+        // Assert
+        Assert.AreEqual(expected, result);
+    }
 }
