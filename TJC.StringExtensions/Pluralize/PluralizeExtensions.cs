@@ -6,7 +6,7 @@
 public static class PluralizeExtensions
 {
     /// <summary>
-    /// Pluralized a string based upon the number of objects within a collection
+    /// Pluralize a string based upon the number of objects within a collection.
     /// </summary>
     /// <param name="objects">Collection to check if we require a pluralized output or not</param>
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
@@ -18,7 +18,19 @@ public static class PluralizeExtensions
         nonPluralized.Pluralize(objects.Count(), pluralized);
 
     /// <summary>
-    /// Pluralized a string based upon the value of number
+    /// Pluralize a string based upon the number of objects within a collection.
+    /// </summary>
+    /// <param name="objects">Collection to check if we require a pluralized output or not</param>
+    /// <param name="nonPluralized">Non-Pluralized form of the string</param>
+    /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
+    /// <returns></returns>
+    public static string Pluralize(this string nonPluralized,
+                                   IEnumerable<object> objects,
+                                   string? pluralized = null) =>
+        nonPluralized.Pluralize(objects.Count(), pluralized);
+
+    /// <summary>
+    /// Pluralize a string based upon the value of number.
     /// </summary>
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
     /// <param name="number">Number (Pluralize unless equal to 1)</param>
@@ -30,7 +42,7 @@ public static class PluralizeExtensions
         nonPluralized.Pluralize(!number.IsOne(), pluralized);
 
     /// <summary>
-    /// Pluralized a string based upon the value of number
+    /// Pluralize a string based upon the value of number.
     /// </summary>
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
     /// <param name="number">Number (Pluralize unless equal to 1)</param>
@@ -42,7 +54,7 @@ public static class PluralizeExtensions
         nonPluralized.Pluralize(!number.IsOne(), pluralized);
 
     /// <summary>
-    /// Pluralized a string based upon a boolean
+    /// Pluralize a string based upon a boolean.
     /// </summary>
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
     /// <param name="pluralize">Should we pluralize or not</param>
