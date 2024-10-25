@@ -15,7 +15,7 @@ public static class CamelCaseExtensions
     /// <param name="input"></param>
     /// <param name="separator"></param>
     /// <returns></returns>
-    public static string SplitCamelCase(this string input, string separator = " ")
+    public static string SplitCamelCase(this string? input, string separator = " ")
     {
         if (string.IsNullOrEmpty(input))
             return string.Empty;
