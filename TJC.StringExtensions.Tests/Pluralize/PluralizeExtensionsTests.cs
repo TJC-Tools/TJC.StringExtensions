@@ -6,7 +6,7 @@ namespace TJC.StringExtensions.Tests.Pluralize;
 public class PluralizeExtensionsTests
 {
     [TestMethod]
-    public void Pluralize_ObjectCollection_CountZero_ReturnsNonPluralized()
+    public void Pluralize_ObjectCollection_CountZero_ReturnsPluralized()
     {
         // Arrange
         var objects = new List<object>();
@@ -29,6 +29,19 @@ public class PluralizeExtensionsTests
 
         // Assert
         Assert.AreEqual("item", result);
+    }
+
+    [TestMethod]
+    public void Pluralize_ObjectCollection_CountTwo_ReturnsPluralized()
+    {
+        // Arrange
+        var objects = new List<object>();
+
+        // Act
+        var result = "item".Pluralize(objects);
+
+        // Assert
+        Assert.AreEqual("items", result);
     }
 
     [DataRow(0, "items")]
