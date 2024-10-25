@@ -1,5 +1,8 @@
 ﻿namespace TJC.StringExtensions.Pluralize;
 
+/// <summary>
+/// Extensions for pluralizing strings.
+/// </summary>
 public static class PluralizeExtensions
 {
     /// <summary>
