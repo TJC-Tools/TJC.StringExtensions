@@ -2,10 +2,13 @@
 
 namespace TJC.StringExtensions.Parsing;
 
+/// <summary>
+/// Parsing extensions for strings.
+/// </summary>
 public static partial class StringParserExtensions
 {
     /// <summary>
-    /// Keep Alpha Only
+    /// Keep Alpha Only.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -13,7 +16,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^a-zA-Z]")] public static partial Regex AlphaRegex();
 
     /// <summary>
-    /// Keep Numeric Only
+    /// Keep Numeric Only.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -21,7 +24,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^0-9]")] public static partial Regex NumericRegex();
 
     /// <summary>
-    /// Keep Numeric & Period
+    /// Keep Numeric &amp; Period.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -29,7 +32,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^0-9.]")] public static partial Regex NumericAndPeriodRegex();
 
     /// <summary>
-    /// Keep Alpha & Numeric
+    /// Keep Alpha &amp; Numeric.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -37,7 +40,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^a-zA-Z0-9]")] public static partial Regex AlphaNumericRegex();
 
     /// <summary>
-    /// Keep Alpha, Numeric & Space
+    /// Keep Alpha, Numeric &amp; Space.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -45,7 +48,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^a-zA-Z0-9 ]")] public static partial Regex AlphaNumericAndSpaceRegex();
 
     /// <summary>
-    /// Keep Alpha, Numeric, Space & Period
+    /// Keep Alpha, Numeric, Space &amp; Period.
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -53,7 +56,7 @@ public static partial class StringParserExtensions
     [GeneratedRegex("[^a-zA-Z0-9. ]")] public static partial Regex AlphaNumericSpaceAndPeriodRegex();
 
     /// <summary>
-    /// Keep Only Alpha, Numeric, Spaces, & Excluded Symbols
+    /// Keep Only Alpha, Numeric, Spaces, &amp; Excluded Symbols.
     /// </summary>
     /// <param name="str"></param>
     /// <param name="exceptions"></param>
