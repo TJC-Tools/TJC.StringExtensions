@@ -6,6 +6,20 @@ namespace TJC.StringExtensions.Tests.Cases;
 public class CamelCaseExtensionsTests
 {
     [TestMethod]
+    public void SplitCamelCase_Null_ReturnsEmpty()
+    {
+        // Arrange
+        string? input = null;
+        var expected = string.Empty;
+
+        // Act
+        var result = input.SplitCamelCase();
+
+        // Assert
+        Assert.AreEqual(expected, result);
+    }
+
+    [TestMethod]
     public void SplitCamelCase_FirstLetterLowercase_SplitsWithSpace()
     {
         // Arrange
