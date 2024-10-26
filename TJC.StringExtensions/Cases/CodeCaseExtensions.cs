@@ -36,6 +36,6 @@ public static partial class CodeCaseExtensions
 
     private static readonly Regex CaseWordSplitter = CaseWordSplitterRegex();
 
-    [GeneratedRegex(@"[a-z][A-Z]|[_\- ]", RegexOptions.Compiled)]
+    [GeneratedRegex(@"(?<!^)(?=[A-Z])|[_\- ]", RegexOptions.Compiled)]
     private static partial Regex CaseWordSplitterRegex();
 }

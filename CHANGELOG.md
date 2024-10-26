@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Bug with code case converter regex
+
 ## [0.5.0] - 2024-10-25
 
-## [0.4.3] - 2024-10-25
+### Added
 
-## [0.4.2] - 2024-10-25
-
-## [0.4.1] - 2024-10-25
+- Code case converters (Pascal, Camel, Snake, Kebab, Train)
 
 ## [0.4.0] - 2024-10-25
 
@@ -26,10 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Codecov reporting
-
-## [0.2.2] - 2024-10-20
-
-## [0.2.1] - 2024-10-16
 
 ## [0.2.0] - 2024-10-10
 
