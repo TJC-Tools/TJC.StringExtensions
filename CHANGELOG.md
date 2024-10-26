@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.2] - 2024-10-26
+
 ### Added
 
 - Release notes to the NuGet Package
@@ -47,7 +49,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Created many extensions
 
-[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.5.2...HEAD
+
+[0.5.2]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.5.1...v0.5.2
 
 [0.5.1]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.5.0...v0.5.1
 
