@@ -35,8 +35,8 @@ public static class LineExtensions
 
         var array = text.Split(separator);
         foreach (var word in array)
-        foreach (var subword in word.SplitChunks(width))
-            list.AddWord(subword, width, separator);
+        foreach (var chunk in word.SplitChunks(width))
+            list.AddWord(chunk, width, separator);
 
         return list;
     }
