@@ -17,7 +17,9 @@ public static class CamelCaseExtensions
     {
         if (string.IsNullOrEmpty(input))
             return string.Empty;
-        return string.Concat(input.Select((x, i) => i > 0 && char.IsUpper(x) ? $"{separator}{x}" : x.ToString()));
+        return string.Concat(
+            input.Select((x, i) => i > 0 && char.IsUpper(x) ? $"{separator}{x}" : x.ToString())
+        );
     }
 
     /// <summary>
