@@ -13,6 +13,8 @@ public static class TrainCaseExtensions
     /// <param name="input"></param>
     /// <returns>Train-Case</returns>
     public static string ToTrainCase(this string input) =>
-        string.Join("-", input.CodeCaseToWords()
-            .Select(word => char.ToUpper(word[0]) + word[1..].ToLower()));
+        string.Join(
+            "-",
+            input.CodeCaseToWords().Select(word => char.ToUpper(word[0]) + word[1..].ToLower())
+        );
 }

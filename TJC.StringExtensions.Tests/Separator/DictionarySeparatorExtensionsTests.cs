@@ -5,7 +5,13 @@ namespace TJC.StringExtensions.Tests.Separator;
 [TestClass]
 public class DictionarySeparatorExtensionsTests
 {
-    private readonly Dictionary<int, string> _samples = new() { { 1, "one" }, { 2, "two" }, { 3, "three" } };
+    private readonly Dictionary<int, string> _samples =
+        new()
+        {
+            { 1, "one" },
+            { 2, "two" },
+            { 3, "three" },
+        };
 
     [TestMethod]
     public void JoinBothTest()

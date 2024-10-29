@@ -24,7 +24,7 @@ public class LineExtensionsTests
     public void SplitLines()
     {
         // Arrange
-        var text = "1234 5678 90AB CDEF FEDC BA09 8765 4321 TEST";
+        var text = "1234 5678 90AB TEST WORD BA09 8765 4321 TEST";
 
         // Act
         var result = text.SplitLines(16);
@@ -32,7 +32,7 @@ public class LineExtensionsTests
         // Assert
         Assert.AreEqual(3, result.Count);
         Assert.AreEqual("1234 5678 90AB", result[0]);
-        Assert.AreEqual("CDEF FEDC BA09", result[1]);
+        Assert.AreEqual("TEST WORD BA09", result[1]);
         Assert.AreEqual("8765 4321 TEST", result[2]);
     }
 
@@ -40,15 +40,15 @@ public class LineExtensionsTests
     public void SplitLinesWithoutSpaces()
     {
         // Arrange
-        var text = "1234567890ABCDEFFEDCBA0987654321TEST";
+        var text = "1234567890TEST1001WORD0987654321TEST";
 
         // Act
         var result = text.SplitLines(16);
 
         // Assert
         Assert.AreEqual(3, result.Count);
-        Assert.AreEqual("1234567890ABCDEF", result[0]);
-        Assert.AreEqual("FEDCBA0987654321", result[1]);
+        Assert.AreEqual("1234567890TEST10", result[0]);
+        Assert.AreEqual("01WORD0987654321", result[1]);
         Assert.AreEqual("TEST", result[2]);
     }
 

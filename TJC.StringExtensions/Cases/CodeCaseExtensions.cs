@@ -29,7 +29,7 @@ public static partial class CodeCaseExtensions
     {
         if (string.IsNullOrWhiteSpace(input))
             return [];
-        // Add spaces around transitions (camelCase, PascalCase) and split by space, hyphen, or underscore        
+        // Add spaces around transitions (camelCase, PascalCase) and split by space, hyphen, or underscore
         var spaced = CaseWordSplitter.Replace(input, " ");
         return spaced.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
     }

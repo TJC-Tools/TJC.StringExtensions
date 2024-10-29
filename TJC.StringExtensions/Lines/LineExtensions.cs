@@ -23,7 +23,11 @@ public static class LineExtensions
     /// <param name="width"></param>
     /// <param name="separator"></param>
     /// <returns></returns>
-    public static List<string> SplitLines(this string? text, int width = MaxLineWidth, char separator = ' ')
+    public static List<string> SplitLines(
+        this string? text,
+        int width = MaxLineWidth,
+        char separator = ' '
+    )
     {
         var list = new List<string>();
         if (text == null)
@@ -31,8 +35,8 @@ public static class LineExtensions
 
         var array = text.Split(separator);
         foreach (var word in array)
-            foreach (var subword in word.SplitChunks(width))
-                list.AddWord(subword, width, separator);
+        foreach (var chunk in word.SplitChunks(width))
+            list.AddWord(chunk, width, separator);
 
         return list;
     }
@@ -58,7 +62,12 @@ public static class LineExtensions
     /// <param name="word"></param>
     /// <param name="width"></param>
     /// <param name="separator"></param>
-    private static void AddWord(this List<string> lines, string word, int width, char separator = ' ')
+    private static void AddWord(
+        this List<string> lines,
+        string word,
+        int width,
+        char separator = ' '
+    )
     {
         word = word.ReplaceLineEndings();
         if (!word.Contains(Environment.NewLine))
@@ -96,7 +105,11 @@ public static class LineExtensions
     {
         var lastLineWasBlank = false;
         var list = new List<string>();
-        foreach (string item in lines.Where((string line) => !string.IsNullOrWhiteSpace(line) || !lastLineWasBlank))
+        foreach (
+            string item in lines.Where(
+                (string line) => !string.IsNullOrWhiteSpace(line) || !lastLineWasBlank
+            )
+        )
         {
             list.Add(item);
             lastLineWasBlank = string.IsNullOrWhiteSpace(item);

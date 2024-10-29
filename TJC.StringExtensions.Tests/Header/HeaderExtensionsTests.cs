@@ -9,7 +9,12 @@ public class HeaderExtensionsTests
     public void GetHeader()
     {
         // Arrange
-        var headerLines = new List<string> { "Title", "This is a description", "and this is another line" };
+        var headerLines = new List<string>
+        {
+            "Title",
+            "This is a description",
+            "and this is another line",
+        };
 
         // Act
         var result = headerLines.GenerateHeader().ToList();

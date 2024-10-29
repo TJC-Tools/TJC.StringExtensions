@@ -12,10 +12,11 @@ public static class PluralizeExtensions
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
     /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
     /// <returns></returns>
-    public static string Pluralize(this IEnumerable<object> objects,
-                                   string nonPluralized,
-                                   string? pluralized = null) =>
-        nonPluralized.Pluralize(objects.Count(), pluralized);
+    public static string Pluralize(
+        this IEnumerable<object> objects,
+        string nonPluralized,
+        string? pluralized = null
+    ) => nonPluralized.Pluralize(objects.Count(), pluralized);
 
     /// <summary>
     /// Pluralize a string based upon the number of objects within a collection.
@@ -24,10 +25,11 @@ public static class PluralizeExtensions
     /// <param name="nonPluralized">Non-Pluralized form of the string</param>
     /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
     /// <returns></returns>
-    public static string Pluralize(this string nonPluralized,
-                                   IEnumerable<object> objects,
-                                   string? pluralized = null) =>
-        nonPluralized.Pluralize(objects.Count(), pluralized);
+    public static string Pluralize(
+        this string nonPluralized,
+        IEnumerable<object> objects,
+        string? pluralized = null
+    ) => nonPluralized.Pluralize(objects.Count(), pluralized);
 
     /// <summary>
     /// Pluralize a string based upon the value of number.
@@ -36,10 +38,11 @@ public static class PluralizeExtensions
     /// <param name="number">Number (Pluralize unless equal to 1)</param>
     /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
     /// <returns></returns>
-    public static string Pluralize(this string nonPluralized,
-                                   double number,
-                                   string? pluralized = null) =>
-        nonPluralized.Pluralize(!number.IsOne(), pluralized);
+    public static string Pluralize(
+        this string nonPluralized,
+        double number,
+        string? pluralized = null
+    ) => nonPluralized.Pluralize(!number.IsOne(), pluralized);
 
     /// <summary>
     /// Pluralize a string based upon the value of number.
@@ -48,10 +51,11 @@ public static class PluralizeExtensions
     /// <param name="number">Number (Pluralize unless equal to 1)</param>
     /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
     /// <returns></returns>
-    public static string Pluralize(this string nonPluralized,
-                                   int number,
-                                   string? pluralized = null) =>
-        nonPluralized.Pluralize(!number.IsOne(), pluralized);
+    public static string Pluralize(
+        this string nonPluralized,
+        int number,
+        string? pluralized = null
+    ) => nonPluralized.Pluralize(!number.IsOne(), pluralized);
 
     /// <summary>
     /// Pluralize a string based upon a boolean.
@@ -60,11 +64,16 @@ public static class PluralizeExtensions
     /// <param name="pluralize">Should we pluralize or not</param>
     /// <param name="pluralized">(Optional) Pluralized form of the string. If omitted, will return the Non-Pluralized form of the string with an 's' on the end</param>
     /// <returns></returns>
-    public static string Pluralize(this string nonPluralized,
-                                   bool pluralize,
-                                   string? pluralized = null) =>
-        pluralize ? !string.IsNullOrEmpty(pluralized) ? pluralized :
-            string.Concat(nonPluralized, 's') : nonPluralized;
+    public static string Pluralize(
+        this string nonPluralized,
+        bool pluralize,
+        string? pluralized = null
+    ) =>
+        pluralize
+            ? !string.IsNullOrEmpty(pluralized)
+                ? pluralized
+                : string.Concat(nonPluralized, 's')
+            : nonPluralized;
 
     internal static bool IsOne(this string number) =>
         double.TryParse(number, out var value) && value.IsOne();
@@ -72,6 +81,5 @@ public static class PluralizeExtensions
     internal static bool IsOne(this double number, double eps = double.Epsilon) =>
         Math.Abs(number - 1) < eps;
 
-    internal static bool IsOne(this int number) =>
-        number == 1;
+    internal static bool IsOne(this int number) => number == 1;
 }
