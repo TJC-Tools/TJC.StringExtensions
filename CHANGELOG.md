@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.3] - 2024-11-15
+
 ### Added
 
 - Changelog changed check workflow for pr's
@@ -63,7 +65,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Created many extensions
 
-[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.2...HEAD
+[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.3...HEAD
+
+[0.6.3]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.2...v0.6.3
 
 [0.6.2]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.1...v0.6.2
 
