@@ -9,10 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.6.6] - 2025-04-15
 
-## [0.6.5] - 2024-12-03
-
-## [0.6.4] - 2024-12-03
-
 ## [0.6.3] - 2024-11-15
 
 ### Added
@@ -24,10 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Add all dependency `.dll's` to the release
-
-## [0.6.1] - 2024-11-05
-
-## [0.6.0] - 2024-11-05
 
 ## [0.5.2] - 2024-10-26
 
