@@ -71,6 +71,22 @@ public class PluralizeExtensionsTests
     }
 
     [TestMethod]
+    public void Pluralize_CustomPlural_ReturnsCustomPluralWhenRequired()
+    {
+        var result = "person".Pluralize(2, "people");
+
+        Assert.AreEqual("people", result);
+    }
+
+    [TestMethod]
+    public void IsOne_InvalidStringNumber_ReturnsFalse()
+    {
+        var result = "not a number".IsOne();
+
+        Assert.IsFalse(result);
+    }
+
+    [TestMethod]
     public void IsOne_StringIsOne_ReturnsTrue()
     {
         // Arrange

@@ -88,6 +88,14 @@ public class ListSeparatorExtensionsTests
     }
 
     [TestMethod]
+    public void JoinFinalSeparator_SingleItem_ReturnsItemWithoutFinalSeparator()
+    {
+        var result = new List<string> { "one" }.JoinFinalSeparator(", ", " and ");
+
+        Assert.AreEqual("one", result);
+    }
+
+    [TestMethod]
     public void JoinBulletTest()
     {
         // Act

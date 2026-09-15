@@ -53,6 +53,23 @@ public class LineExtensionsTests
     }
 
     [TestMethod]
+    public void SplitLines_NullText_ReturnsEmptyList()
+    {
+        var result = ((string?)null).SplitLines();
+
+        Assert.AreEqual(0, result.Count);
+    }
+
+    [TestMethod]
+    public void SplitLines_EmbeddedNewLine_CreatesSeparateLines()
+    {
+        var result = "first\nsecond".SplitLines(20);
+
+        CollectionAssert.Contains(result, "first");
+        Assert.IsTrue(result.Any(line => line.Trim() == "second"));
+    }
+
+    [TestMethod]
     public void RemoveMultipleBlankLines()
     {
         // Arrange
@@ -69,5 +86,13 @@ public class LineExtensionsTests
         Assert.AreEqual("5", result[3]);
         Assert.AreEqual("6", result[4]);
         Assert.AreEqual("", result[5]);
+    }
+
+    [TestMethod]
+    public void RemoveMultipleBlankLines_StringInput_RemovesConsecutiveBlankLines()
+    {
+        var result = "first\n\n\nsecond".RemoveMultipleBlankLines();
+
+        Assert.AreEqual("first\n\nsecond", result);
     }
 }
