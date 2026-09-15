@@ -2,7 +2,6 @@ using TJC.StringExtensions.Separator;
 
 namespace TJC.StringExtensions.Tests.Separator;
 
-
 public class ListSeparatorExtensionsTests
 {
     private readonly List<string> _samples = ["one", "two", "three"];

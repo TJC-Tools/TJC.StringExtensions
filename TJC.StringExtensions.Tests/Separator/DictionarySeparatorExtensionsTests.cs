@@ -2,7 +2,6 @@ using TJC.StringExtensions.Separator;
 
 namespace TJC.StringExtensions.Tests.Separator;
 
-
 public class DictionarySeparatorExtensionsTests
 {
     private readonly Dictionary<int, string> _samples = new()
