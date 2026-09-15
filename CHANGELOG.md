@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-09-15
+
 ### Changed
 
 - Updated to .NET 10
@@ -73,11 +75,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Created many extensions
 
-[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.8...HEAD
+[Unreleased]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.7.0...HEAD
+
+[0.7.0]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.8...v0.7.0
 
 [0.6.8]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.7...v0.6.8
 
-[0.6.7]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.6...v0.6.7
+[0.6.7]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.3...v0.6.7
 
 [0.6.3]: https://github.com/TJC-Tools/TJC.StringExtensions/compare/v0.6.2...v0.6.3
 
