@@ -2,7 +2,6 @@ using TJC.StringExtensions.Parsing;
 
 namespace TJC.StringExtensions.Tests.Parsing;
 
-
 public class StringParserExtensionsTests
 {
     [Fact]
