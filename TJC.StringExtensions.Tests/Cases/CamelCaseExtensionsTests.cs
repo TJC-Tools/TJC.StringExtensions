@@ -2,7 +2,6 @@ using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-
 public class CamelCaseExtensionsTests
 {
     [Fact]

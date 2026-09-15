@@ -2,7 +2,6 @@ using TJC.StringExtensions.Header;
 
 namespace TJC.StringExtensions.Tests.Header;
 
-
 public class HeaderExtensionsTests
 {
     [Fact]

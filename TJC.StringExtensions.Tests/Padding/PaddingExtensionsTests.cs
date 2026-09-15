@@ -2,7 +2,6 @@ using TJC.StringExtensions.Padding;
 
 namespace TJC.StringExtensions.Tests.Padding;
 
-
 public class PaddingExtensionsTests
 {
     [Fact]
