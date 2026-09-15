@@ -2,7 +2,6 @@ using TJC.StringExtensions.Pluralize;
 
 namespace TJC.StringExtensions.Tests.Pluralize;
 
-
 public class PluralizeExtensionsTests
 {
     [Fact]

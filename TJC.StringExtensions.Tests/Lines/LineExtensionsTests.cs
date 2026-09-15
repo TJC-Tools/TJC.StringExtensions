@@ -2,7 +2,6 @@ using TJC.StringExtensions.Lines;
 
 namespace TJC.StringExtensions.Tests.Lines;
 
-
 public class LineExtensionsTests
 {
     [Fact]
@@ -57,7 +56,7 @@ public class LineExtensionsTests
     {
         var result = ((string?)null).SplitLines();
 
-        Assert.Equal(0, result.Count);
+        Assert.Empty(result);
     }
 
     [Fact]
@@ -66,7 +65,7 @@ public class LineExtensionsTests
         var result = "first\nsecond".SplitLines(20);
 
         Assert.Contains("first", result);
-        Assert.True(result.Any(line => line.Trim() == "second"));
+        Assert.Contains(result, line => line.Trim() == "second");
     }
 
     [Fact]
