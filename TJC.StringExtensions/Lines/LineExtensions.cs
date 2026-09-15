@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Lines;
+namespace TJC.StringExtensions.Lines;
 
 /// <summary>
 /// Extensions for lines of text.

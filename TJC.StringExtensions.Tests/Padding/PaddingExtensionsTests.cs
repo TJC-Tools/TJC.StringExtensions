@@ -2,10 +2,10 @@ using TJC.StringExtensions.Padding;
 
 namespace TJC.StringExtensions.Tests.Padding;
 
-[TestClass]
+
 public class PaddingExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void PadBoth_Unbalanced1()
     {
         // Arrange
@@ -15,10 +15,10 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(4);
 
         // Assert
-        Assert.AreEqual("abc ", result);
+        Assert.Equal("abc ", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void PadBoth_Balanced1()
     {
         // Arrange
@@ -28,10 +28,10 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(5);
 
         // Assert
-        Assert.AreEqual(" abc ", result);
+        Assert.Equal(" abc ", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void PadBoth_Unbalanced2()
     {
         // Arrange
@@ -41,10 +41,10 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(6);
 
         // Assert
-        Assert.AreEqual(" abc  ", result);
+        Assert.Equal(" abc  ", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void PadBoth_Balanced2()
     {
         // Arrange
@@ -54,10 +54,10 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(7);
 
         // Assert
-        Assert.AreEqual("  abc  ", result);
+        Assert.Equal("  abc  ", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void PadBoth_Unbalanced3()
     {
         // Arrange
@@ -67,6 +67,6 @@ public class PaddingExtensionsTests
         var result = text.PadBoth(8);
 
         // Assert
-        Assert.AreEqual("  abc   ", result);
+        Assert.Equal("  abc   ", result);
     }
 }

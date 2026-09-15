@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Cases;
+namespace TJC.StringExtensions.Cases;
 
 /// <summary>
 /// Snake case extensions for strings.

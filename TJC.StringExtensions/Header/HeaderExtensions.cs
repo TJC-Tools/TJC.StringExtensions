@@ -1,4 +1,4 @@
-﻿using TJC.StringExtensions.Lines;
+using TJC.StringExtensions.Lines;
 using TJC.StringExtensions.Padding;
 
 namespace TJC.StringExtensions.Header;

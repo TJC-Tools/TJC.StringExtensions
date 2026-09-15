@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Cases;
+using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-[TestClass]
+
 public class SnakeCaseExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void ToSnakeCaseTest()
     {
         // Arrange
@@ -16,6 +16,6 @@ public class SnakeCaseExtensionsTests
         var result = input.ToSnakeCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Separator;
+namespace TJC.StringExtensions.Separator;
 
 /// <summary>
 /// Separator extensions for strings.

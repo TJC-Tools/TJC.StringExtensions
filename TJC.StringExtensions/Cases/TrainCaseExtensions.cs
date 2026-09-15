@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Cases;
+namespace TJC.StringExtensions.Cases;
 
 /// <summary>
 /// Train case extensions for strings.

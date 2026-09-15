@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Cases;
+namespace TJC.StringExtensions.Cases;
 
 /// <summary>
 /// Camel case extensions for strings.

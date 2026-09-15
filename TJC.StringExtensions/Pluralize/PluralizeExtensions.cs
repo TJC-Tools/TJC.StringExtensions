@@ -1,4 +1,4 @@
-﻿namespace TJC.StringExtensions.Pluralize;
+namespace TJC.StringExtensions.Pluralize;
 
 /// <summary>
 /// Extensions for pluralizing strings.

@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Cases;
+using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-[TestClass]
+
 public class KebabCaseExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void ToKebabCaseTest()
     {
         // Arrange
@@ -16,10 +16,10 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void FromPascalCase_ToKebabCase()
     {
         // Arrange
@@ -30,10 +30,10 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void FromCamelCase_ToKebabCase()
     {
         // Arrange
@@ -44,10 +44,10 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void FromTrainCase_ToKebabCase()
     {
         // Arrange
@@ -58,10 +58,10 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void FromSnakeCase_ToKebabCase()
     {
         // Arrange
@@ -72,10 +72,10 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void FromKebabCase_ToKebabCase()
     {
         // Arrange
@@ -86,6 +86,6 @@ public class KebabCaseExtensionsTests
         var result = input.ToKebabCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 }

@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Cases;
+using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-[TestClass]
+
 public class PascalCaseExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void ToPascalCaseTest()
     {
         // Arrange
@@ -16,6 +16,6 @@ public class PascalCaseExtensionsTests
         var result = input.ToPascalCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 }

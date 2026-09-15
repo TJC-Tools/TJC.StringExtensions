@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Cases;
+using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-[TestClass]
+
 public class CamelCaseExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void SplitCamelCase_Null_ReturnsEmpty()
     {
         // Arrange
@@ -16,10 +16,10 @@ public class CamelCaseExtensionsTests
         var result = input.SplitCamelCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitCamelCase_FirstLetterLowercase_SplitsWithSpace()
     {
         // Arrange
@@ -30,10 +30,10 @@ public class CamelCaseExtensionsTests
         var result = input.SplitCamelCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitCamelCase_FirstLetterUppercase_SplitsWithSpace()
     {
         // Arrange
@@ -44,10 +44,10 @@ public class CamelCaseExtensionsTests
         var result = input.SplitCamelCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void ToCamelCaseTest()
     {
         // Arrange
@@ -58,6 +58,6 @@ public class CamelCaseExtensionsTests
         var result = input.ToCamelCase();
 
         // Assert
-        Assert.AreEqual(expected, result);
+        Assert.Equal(expected, result);
     }
 }

@@ -2,32 +2,32 @@ using TJC.StringExtensions.Cases;
 
 namespace TJC.StringExtensions.Tests.Cases;
 
-[TestClass]
+
 public class CodeCaseExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void SplitCodeCase_NullInput_ReturnsEmptyString()
     {
         string? input = null;
 
         var result = input!.SplitCodeCase();
 
-        Assert.AreEqual(string.Empty, result);
+        Assert.Equal(string.Empty, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void CodeCaseToWords_WhitespaceInput_ReturnsEmptyArray()
     {
         var result = " \t ".CodeCaseToWords();
 
-        CollectionAssert.AreEqual(Array.Empty<string>(), result);
+        Assert.Equal(Array.Empty<string>(), result);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitCodeCase_PascalCaseInput_ReturnsSeparatedWords()
     {
         var result = "SplitCodeCase".SplitCodeCase("-");
 
-        Assert.AreEqual("Split-Code-Case", result);
+        Assert.Equal("Split-Code-Case", result);
     }
 }

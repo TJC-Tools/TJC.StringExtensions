@@ -2,10 +2,10 @@ using TJC.StringExtensions.Pluralize;
 
 namespace TJC.StringExtensions.Tests.Pluralize;
 
-[TestClass]
+
 public class PluralizeExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void Pluralize_ObjectCollection_CountZero_ReturnsPluralized()
     {
         // Arrange
@@ -15,10 +15,10 @@ public class PluralizeExtensionsTests
         var result = objects.Pluralize("item");
 
         // Assert
-        Assert.AreEqual("items", result);
+        Assert.Equal("items", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void Pluralize_ObjectCollection_CountOne_ReturnsNonPluralized()
     {
         // Arrange
@@ -28,10 +28,10 @@ public class PluralizeExtensionsTests
         var result = objects.Pluralize("item");
 
         // Assert
-        Assert.AreEqual("item", result);
+        Assert.Equal("item", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void Pluralize_ObjectCollection_CountTwo_ReturnsPluralized()
     {
         // Arrange
@@ -41,52 +41,52 @@ public class PluralizeExtensionsTests
         var result = "item".Pluralize(objects);
 
         // Assert
-        Assert.AreEqual("items", result);
+        Assert.Equal("items", result);
     }
 
-    [DataRow(0, "items")]
-    [DataRow(1, "item")]
-    [DataRow(2, "items")]
-    [DataTestMethod]
+    [InlineData(0, "items")]
+    [InlineData(1, "item")]
+    [InlineData(2, "items")]
+    [Theory]
     public void Pluralize_Number_ReturnsCorrectPluralization(int number, string expected)
     {
         // Act
         var result = "item".Pluralize(number);
 
         // Assert
-        Assert.AreEqual(expected, result, $"{number} {result}");
+        Assert.Equal(expected, result);
     }
 
-    [DataRow(0, "items")]
-    [DataRow(1, "item")]
-    [DataRow(2, "items")]
-    [DataTestMethod]
+    [InlineData(0, "items")]
+    [InlineData(1, "item")]
+    [InlineData(2, "items")]
+    [Theory]
     public void Pluralize_Double_ReturnsCorrectPluralization(double number, string expected)
     {
         // Act
         var result = "item".Pluralize(number);
 
         // Assert
-        Assert.AreEqual(expected, result, $"{number} {result}");
+        Assert.Equal(expected, result);
     }
 
-    [TestMethod]
+    [Fact]
     public void Pluralize_CustomPlural_ReturnsCustomPluralWhenRequired()
     {
         var result = "person".Pluralize(2, "people");
 
-        Assert.AreEqual("people", result);
+        Assert.Equal("people", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void IsOne_InvalidStringNumber_ReturnsFalse()
     {
         var result = "not a number".IsOne();
 
-        Assert.IsFalse(result);
+        Assert.False(result);
     }
 
-    [TestMethod]
+    [Fact]
     public void IsOne_StringIsOne_ReturnsTrue()
     {
         // Arrange
@@ -96,10 +96,10 @@ public class PluralizeExtensionsTests
         var result = number.IsOne();
 
         // Assert
-        Assert.IsTrue(result);
+        Assert.True(result);
     }
 
-    [TestMethod]
+    [Fact]
     public void IsOne_StringIsNotOne_ReturnsFalse()
     {
         // Arrange
@@ -109,10 +109,10 @@ public class PluralizeExtensionsTests
         var result = number.IsOne();
 
         // Assert
-        Assert.IsFalse(result);
+        Assert.False(result);
     }
 
-    [TestMethod]
+    [Fact]
     public void IsOne_DoubleIsOne_ReturnsTrue()
     {
         // Arrange
@@ -122,10 +122,10 @@ public class PluralizeExtensionsTests
         var result = number.IsOne();
 
         // Assert
-        Assert.IsTrue(result);
+        Assert.True(result);
     }
 
-    [TestMethod]
+    [Fact]
     public void IsOne_DoubleIsNotOne_ReturnsFalse()
     {
         // Arrange
@@ -135,6 +135,6 @@ public class PluralizeExtensionsTests
         var result = number.IsOne();
 
         // Assert
-        Assert.IsFalse(result);
+        Assert.False(result);
     }
 }

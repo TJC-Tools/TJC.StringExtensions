@@ -1,127 +1,127 @@
-﻿using TJC.StringExtensions.Separator;
+using TJC.StringExtensions.Separator;
 
 namespace TJC.StringExtensions.Tests.Separator;
 
-[TestClass]
+
 public class ListSeparatorExtensionsTests
 {
     private readonly List<string> _samples = ["one", "two", "three"];
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaTest()
     {
         // Act
         var result = _samples.JoinComma();
 
         // Assert
-        Assert.AreEqual("one, two, three", result);
+        Assert.Equal("one, two, three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaOrTest()
     {
         // Act
         var result = _samples.JoinCommaOr(orWithComma: false);
 
         // Assert
-        Assert.AreEqual("one, two or three", result);
+        Assert.Equal("one, two or three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaOrWithCommaTest()
     {
         // Act
         var result = _samples.JoinCommaOr(orWithComma: true);
 
         // Assert
-        Assert.AreEqual("one, two, or three", result);
+        Assert.Equal("one, two, or three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaAndTest()
     {
         // Act
         var result = _samples.JoinCommaAnd(andWithComma: false);
 
         // Assert
-        Assert.AreEqual("one, two and three", result);
+        Assert.Equal("one, two and three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaAndWithCommaTest()
     {
         // Act
         var result = _samples.JoinCommaAnd(andWithComma: true);
 
         // Assert
-        Assert.AreEqual("one, two, and three", result);
+        Assert.Equal("one, two, and three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaAmpersandTest()
     {
         // Act
         var result = _samples.JoinCommaAmpersand(andWithComma: false);
 
         // Assert
-        Assert.AreEqual("one, two & three", result);
+        Assert.Equal("one, two & three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinCommaAmpersandWithCommaTest()
     {
         // Act
         var result = _samples.JoinCommaAmpersand(andWithComma: true);
 
         // Assert
-        Assert.AreEqual("one, two, & three", result);
+        Assert.Equal("one, two, & three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinFinalSeparatorTest()
     {
         // Act
         var result = _samples.JoinFinalSeparator(".", "|");
 
         // Assert
-        Assert.AreEqual("one.two|three", result);
+        Assert.Equal("one.two|three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinFinalSeparator_SingleItem_ReturnsItemWithoutFinalSeparator()
     {
         var result = new List<string> { "one" }.JoinFinalSeparator(", ", " and ");
 
-        Assert.AreEqual("one", result);
+        Assert.Equal("one", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinBulletTest()
     {
         // Act
         var result = _samples.JoinBullet();
 
         // Assert
-        Assert.AreEqual("\u2022one\n\u2022two\n\u2022three", result);
+        Assert.Equal("\u2022one\n\u2022two\n\u2022three", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinNewLineTest()
     {
         // Act
         var result = _samples.JoinNewLine();
 
         // Assert
-        Assert.AreEqual("one\ntwo\nthree", result);
+        Assert.Equal("one\ntwo\nthree", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void JoinNewLineWithSpacesTest()
     {
         // Act
         var result = _samples.JoinNewLineWithSpaces();
 
         // Assert
-        Assert.AreEqual("    one\n    two\n    three", result);
+        Assert.Equal("    one\n    two\n    three", result);
     }
 }

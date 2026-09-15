@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Parsing;
+using TJC.StringExtensions.Parsing;
 
 namespace TJC.StringExtensions.Tests.Parsing;
 
-[TestClass]
+
 public class StringParserExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepAlpha()
     {
         // Arrange
@@ -15,10 +15,10 @@ public class StringParserExtensionsTests
         var result = input.KeepAlpha();
 
         // Assert
-        Assert.AreEqual("abcde", result);
+        Assert.Equal("abcde", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepNumeric()
     {
         // Arrange
@@ -28,10 +28,10 @@ public class StringParserExtensionsTests
         var result = input.KeepNumeric();
 
         // Assert
-        Assert.AreEqual("12345", result);
+        Assert.Equal("12345", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepNumericAndPeriod()
     {
         // Arrange
@@ -41,10 +41,10 @@ public class StringParserExtensionsTests
         var result = input.KeepNumericAndPeriod();
 
         // Assert
-        Assert.AreEqual("123.45", result);
+        Assert.Equal("123.45", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepAlphaNumeric()
     {
         // Arrange
@@ -54,10 +54,10 @@ public class StringParserExtensionsTests
         var result = input.KeepAlphaNumeric();
 
         // Assert
-        Assert.AreEqual("a1b2c3d4e5", result);
+        Assert.Equal("a1b2c3d4e5", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepAlphaNumericAndSpace()
     {
         // Arrange
@@ -67,10 +67,10 @@ public class StringParserExtensionsTests
         var result = input.KeepAlphaNumericAndSpace();
 
         // Assert
-        Assert.AreEqual("a1b2c3d4 e5", result);
+        Assert.Equal("a1b2c3d4 e5", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_KeepAlphaNumericSpaceAndPeriod()
     {
         // Arrange
@@ -80,10 +80,10 @@ public class StringParserExtensionsTests
         var result = input.KeepAlphaNumericSpaceAndPeriod();
 
         // Assert
-        Assert.AreEqual("a1b2c3.d4 e5", result);
+        Assert.Equal("a1b2c3.d4 e5", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_RemoveSymbols()
     {
         // Arrange
@@ -93,10 +93,10 @@ public class StringParserExtensionsTests
         var result = input.RemoveSymbols();
 
         // Assert
-        Assert.AreEqual("a1b2c3d4 e5", result);
+        Assert.Equal("a1b2c3d4 e5", result);
     }
 
-    [TestMethod]
+    [Fact]
     public void StringParser_RemoveSymbols_WithExceptions()
     {
         // Arrange
@@ -106,6 +106,6 @@ public class StringParserExtensionsTests
         var result = input.RemoveSymbols(['!', '.']);
 
         // Assert
-        Assert.AreEqual("a1!b2c3.d4 e5", result);
+        Assert.Equal("a1!b2c3.d4 e5", result);
     }
 }

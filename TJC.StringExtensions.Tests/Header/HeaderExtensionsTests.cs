@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Header;
+using TJC.StringExtensions.Header;
 
 namespace TJC.StringExtensions.Tests.Header;
 
-[TestClass]
+
 public class HeaderExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void GetHeader()
     {
         // Arrange
@@ -20,11 +20,11 @@ public class HeaderExtensionsTests
         var result = headerLines.GenerateHeader().ToList();
 
         // Assert
-        Assert.AreEqual(5, result.Count);
-        Assert.AreEqual("####################################", result[0]);
-        Assert.AreEqual("###            Title             ###", result[1]);
-        Assert.AreEqual("###    This is a description     ###", result[2]);
-        Assert.AreEqual("###   and this is another line   ###", result[3]);
-        Assert.AreEqual("####################################", result[4]);
+        Assert.Equal(5, result.Count);
+        Assert.Equal("####################################", result[0]);
+        Assert.Equal("###            Title             ###", result[1]);
+        Assert.Equal("###    This is a description     ###", result[2]);
+        Assert.Equal("###   and this is another line   ###", result[3]);
+        Assert.Equal("####################################", result[4]);
     }
 }

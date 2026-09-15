@@ -1,11 +1,11 @@
-﻿using TJC.StringExtensions.Lines;
+using TJC.StringExtensions.Lines;
 
 namespace TJC.StringExtensions.Tests.Lines;
 
-[TestClass]
+
 public class LineExtensionsTests
 {
-    [TestMethod]
+    [Fact]
     public void SplitNewLine()
     {
         // Arrange
@@ -15,12 +15,12 @@ public class LineExtensionsTests
         var result = text.SplitNewLine().ToList();
 
         // Assert
-        Assert.AreEqual(2, result.Count);
-        Assert.AreEqual("12345", result[0]);
-        Assert.AreEqual("67890", result[1]);
+        Assert.Equal(2, result.Count);
+        Assert.Equal("12345", result[0]);
+        Assert.Equal("67890", result[1]);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitLines()
     {
         // Arrange
@@ -30,13 +30,13 @@ public class LineExtensionsTests
         var result = text.SplitLines(16);
 
         // Assert
-        Assert.AreEqual(3, result.Count);
-        Assert.AreEqual("1234 5678 90AB", result[0]);
-        Assert.AreEqual("TEST WORD BA09", result[1]);
-        Assert.AreEqual("8765 4321 TEST", result[2]);
+        Assert.Equal(3, result.Count);
+        Assert.Equal("1234 5678 90AB", result[0]);
+        Assert.Equal("TEST WORD BA09", result[1]);
+        Assert.Equal("8765 4321 TEST", result[2]);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitLinesWithoutSpaces()
     {
         // Arrange
@@ -46,30 +46,30 @@ public class LineExtensionsTests
         var result = text.SplitLines(16);
 
         // Assert
-        Assert.AreEqual(3, result.Count);
-        Assert.AreEqual("1234567890TEST10", result[0]);
-        Assert.AreEqual("01WORD0987654321", result[1]);
-        Assert.AreEqual("TEST", result[2]);
+        Assert.Equal(3, result.Count);
+        Assert.Equal("1234567890TEST10", result[0]);
+        Assert.Equal("01WORD0987654321", result[1]);
+        Assert.Equal("TEST", result[2]);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitLines_NullText_ReturnsEmptyList()
     {
         var result = ((string?)null).SplitLines();
 
-        Assert.AreEqual(0, result.Count);
+        Assert.Equal(0, result.Count);
     }
 
-    [TestMethod]
+    [Fact]
     public void SplitLines_EmbeddedNewLine_CreatesSeparateLines()
     {
         var result = "first\nsecond".SplitLines(20);
 
-        CollectionAssert.Contains(result, "first");
-        Assert.IsTrue(result.Any(line => line.Trim() == "second"));
+        Assert.Contains("first", result);
+        Assert.True(result.Any(line => line.Trim() == "second"));
     }
 
-    [TestMethod]
+    [Fact]
     public void RemoveMultipleBlankLines()
     {
         // Arrange
@@ -79,20 +79,20 @@ public class LineExtensionsTests
         var result = text.RemoveMultipleBlankLines();
 
         // Assert
-        Assert.AreEqual(6, result.Count);
-        Assert.AreEqual("1", result[0]);
-        Assert.AreEqual("2", result[1]);
-        Assert.AreEqual("", result[2]);
-        Assert.AreEqual("5", result[3]);
-        Assert.AreEqual("6", result[4]);
-        Assert.AreEqual("", result[5]);
+        Assert.Equal(6, result.Count);
+        Assert.Equal("1", result[0]);
+        Assert.Equal("2", result[1]);
+        Assert.Equal("", result[2]);
+        Assert.Equal("5", result[3]);
+        Assert.Equal("6", result[4]);
+        Assert.Equal("", result[5]);
     }
 
-    [TestMethod]
+    [Fact]
     public void RemoveMultipleBlankLines_StringInput_RemovesConsecutiveBlankLines()
     {
         var result = "first\n\n\nsecond".RemoveMultipleBlankLines();
 
-        Assert.AreEqual("first\n\nsecond", result);
+        Assert.Equal("first\n\nsecond", result);
     }
 }

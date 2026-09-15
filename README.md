@@ -6,6 +6,7 @@
 ![Size](https://img.shields.io/github/repo-size/TJC-Tools/TJC.StringExtensions)
 [![License](https://img.shields.io/github/license/TJC-Tools/TJC.StringExtensions.svg)](LICENSE)
 
+[![tests](https://github.com/TJC-Tools/TJC.StringExtensions/actions/workflows/ct-matrix.yml/badge.svg)](https://github.com/TJC-Tools/TJC.StringExtensions/actions/workflows/ct-matrix.yml)
 [![codecov](https://codecov.io/gh/TJC-Tools/TJC.StringExtensions/graph/badge.svg?token=RJ4DWNQ7S5)](https://codecov.io/gh/TJC-Tools/TJC.StringExtensions)
 
 ## Documentation
